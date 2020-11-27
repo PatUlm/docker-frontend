@@ -11,6 +11,12 @@ $ docker ps
 $ docker exec -it 04cdafefe547 npm run test
 ```
 
+## Start tests in CI pipeline
+
+```
+$ docker run -e CI=true pulmer75/docker-frontend npm run test
+```
+
 ## Release
 
 ```

@@ -1,0 +1,10 @@
+sudo: required
+language: generic
+services:
+  - docker
+
+before_install:
+  - docker build -t pulmer75/docker-frontend -f Dockerfile.dev .
+
+script:
+  - docker run -e CI=true pulmer75/docker-frontend npm run test -- --coverage
